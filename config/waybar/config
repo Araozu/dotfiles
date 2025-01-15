@@ -1,0 +1,33 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "modules-left": ["river/tags", "river/window"],
+    "modules-center": [],
+    "modules-right": ["cpu", "memory", "network", "pulseaudio", "clock"],
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "CPU {usage}%",
+        "interval": 1
+    },
+    "memory": {
+        "format": "MEM {}%",
+        "interval": 1
+    },
+    "network": {
+        "format-wifi": "WiFi ({signalStrength}%)",
+        "format-ethernet": "ETH",
+        "format-disconnected": "NET ✕"
+    },
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTED"
+    },
+    "river/tags": {
+        "num-tags": 9
+    }
+}

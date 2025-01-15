@@ -1,0 +1,29 @@
+/* ~/.config/waybar/style.css */
+* {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+window#waybar {
+    background: #282828;
+    color: #ebdbb2;
+}
+
+#tags button {
+    padding: 0 5px;
+    color: #928374;
+}
+
+#tags button.focused {
+    color: #ebdbb2;
+    background: #3c3836;
+}
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio {
+    padding: 0 10px;
+}
+
