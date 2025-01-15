@@ -1,0 +1,6 @@
+foot fuzzel river waybar tmux 
+
+brightnessctl
+# Make sure you're in the video group:
+# sudo usermod -aG video $USER
+

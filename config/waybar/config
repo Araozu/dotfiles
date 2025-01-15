@@ -1,11 +1,18 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 24,
+    "height": 26,
     "modules-left": ["river/tags", "river/window"],
     "modules-center": [],
-    "modules-right": ["cpu", "memory", "network", "pulseaudio", "clock"],
+    "modules-right": ["custom/brightness", "cpu", "memory", "network", "pulseaudio", "clock"],
 
+    "custom/brightness": {
+        "format": "BRI {}%",
+        "exec": "ddcutil getvcp 10 | grep -o '[0-9]\\+$'",
+        "on-scroll-up": "ddcutil setvcp 10 + 5",
+        "on-scroll-down": "ddcutil setvcp 10 - 5",
+        "interval": 1
+    },
     "clock": {
         "format": "{:%H:%M}",
         "tooltip": false
