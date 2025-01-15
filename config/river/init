@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# This is the example configuration file for river.
-#
-# If you wish to edit this, you will probably want to copy it to
-# $XDG_CONFIG_HOME/river/init or $HOME/.config/river/init first.
-#
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # documentation.
 
@@ -14,16 +9,11 @@
 # Begin: My own config
 #
 
-# monitor config
-
-# use wlr-randr
-wlr-randr --output DP-1 --pos 0,0 --output HDMI-A-1 --pos 1920,0
-
-# follow focus of the mouse
-riverctl focus-follows-cursor normal
-
 # Super+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal Super+Shift Return spawn foot
+riverctl map normal Super Return spawn foot
+
+# Super+Space to start the launcher: fuzzel
+riverctl map normal Super Space spawn fuzzel
 
 # Set keyboard layout
 riverctl keyboard-layout latam
@@ -44,6 +34,12 @@ riverctl map normal Super L focus-view right
 # RIVER OUTPUTS - MONITORS
 # each monitor is an output.
 #
+
+# use wlr-randr
+wlr-randr --output DP-1 --pos 0,0 --output HDMI-A-1 --pos 1920,0
+
+# follow focus of the mouse
+riverctl focus-follows-cursor normal
 
 # Super+Period and Super+Comma to focus the next/previous output
 riverctl map normal Super Period focus-output next
@@ -71,11 +67,11 @@ riverctl map normal Super+Shift J swap next
 riverctl map normal Super+Shift K swap previous
 
 # Super+Return to bump the focused view to the top of the layout stack
-riverctl map normal Super Return zoom
+# riverctl map normal Super Return zoom
 
 # Super+H and Super+L to decrease/increase the main ratio of rivertile(1)
-riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
+# riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
+# riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
 
 # Super+Shift+H and Super+Shift+L to increment/decrement the main count of rivertile(1)
 riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
@@ -132,7 +128,7 @@ riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
 # Super+Space to toggle float
-riverctl map normal Super Space toggle-float
+# riverctl map normal Super Space toggle-float
 
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen
