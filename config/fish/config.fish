@@ -1,0 +1,41 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+
+# Sane defaults
+set -gx EDITOR vi
+set -gx VISUAL vi
+set -gx TERM foot
+
+# Proper PATH handling
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.cargo/bin
+
+# Better directory navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# vim keybindings
+fish_vi_key_bindings
+# Make the cursor change based on vi mode
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace_one underscore
+set fish_cursor_visual block
+
+# add node to env, installed by nvm fish
+fish_add_path ~/.local/share/nvm/v22.13.0/bin/
+
+# common alias
+alias l="eza -l"
+alias ll="eza -la"
+
+# pnpm
+set -gx PNPM_HOME "/home/fernando/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+starship init fish | source
