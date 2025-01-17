@@ -1,0 +1,6 @@
+font-family = "IosevkaTermSlab Nerd Font"
+font-size = 12
+
+theme = light:Adwaita,dark:Adwaita Dark
+fullscreen = true
+window-decoration = false
