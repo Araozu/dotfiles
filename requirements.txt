@@ -1,5 +1,9 @@
 foot fuzzel river waybar tmux 
 
+# notifications
+# https://wiki.archlinux.org/title/Desktop_notifications
+libnotify mako
+
 brightnessctl
 # Make sure you're in the video group:
 # sudo usermod -aG video $USER

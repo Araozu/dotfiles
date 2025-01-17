@@ -1,0 +1,21 @@
+* {
+    all:unset;
+    font-family: "IosevkaTermSlab Nerd Font", "monospace";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.bar {
+  background-color: black;
+  color: #fafafa;
+}
+
+.single-tag {
+  font-family: "Noto Sans CJK JP Black", "Iwata SeichouG W05 B", "monospace";
+  background-color: #431407;
+  color: #fed7aa;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+}
+
