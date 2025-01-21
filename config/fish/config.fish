@@ -28,8 +28,10 @@ set fish_cursor_visual block
 fish_add_path ~/.local/share/nvm/v22.13.0/bin/
 
 # common alias
-alias l="eza -l"
-alias ll="eza -la"
+alias l='eza --long --header --icons --group-directories-first'
+alias ll='eza --all --long --header --icons --group-directories-first'
+alias lt='eza --ignore-glob="node_modules" --tree --level=2 --header --icons --group-directories-first'
+alias ltt='eza --ignore-glob="node_modules" --tree --header --icons --group-directories-first'
 
 # pnpm
 set -gx PNPM_HOME "/home/fernando/.local/share/pnpm"
