@@ -36,6 +36,9 @@ vim.loader.enable()
 
 require("hotpot") -- Optionally you may call require("hotpot").setup(...) here
 
+-- config defined in fnl
+require("config")
+
 -- You must include Hotpot in your plugin list for it to function correctly.
 -- If you want to use Lazy's "structured" style, see the next code sample.
 require("lazy").setup({
@@ -46,3 +49,5 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 })
+
+
