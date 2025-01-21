@@ -7,6 +7,14 @@ set -gx EDITOR vi
 set -gx VISUAL vi
 set -gx TERM foot
 
+function git-push
+    git push github (git rev-parse --abbrev-ref HEAD)
+end
+
+function git-pull
+    git pull github develop --no-rebase
+end
+
 # Proper PATH handling
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.cargo/bin
