@@ -91,6 +91,17 @@
                        (fn statusline.section_location []
                          "%2l:%-2v"))})
 
+(local autopairs {1 :windwp/nvim-autopairs
+                  :config (fn []
+                            ((. (require :nvim-autopairs) :setup) {})
+                            (local cmp-autopairs
+                                   (require :nvim-autopairs.completion.cmp))
+                            (local cmp (require :cmp))
+                            (cmp.event:on :confirm_done
+                                          (cmp-autopairs.on_confirm_done)))
+                  :dependencies [:hrsh7th/nvim-cmp]
+                  :event :InsertEnter})	
+
 [
  blankline
  emmet
@@ -99,4 +110,5 @@
  comments
  mini
  "tpope/vim-sleuth" ; Detect tabstop and shiftwidth automatically
+ autopairs
  ]
