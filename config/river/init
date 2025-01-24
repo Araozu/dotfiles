@@ -51,7 +51,7 @@ riverctl map normal Super+Shift Comma send-to-output previous
 
 # focused window border
 riverctl border-width 4
-riverctl border-color-focused 0xc026d3ff
+riverctl border-color-focused 0x581C87AA
 riverctl border-color-unfocused 0xff000000
 
 
