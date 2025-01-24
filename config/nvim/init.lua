@@ -49,3 +49,6 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 })
+
+-- set color theme depending on the current folder
+require("autocolors")
