@@ -7,7 +7,7 @@ docker docker-compose
 # neovim config
 # https://github.com/Araozu/neovim-setup.git
 
-foot fuzzel river waybar tmux 
+foot ghostty fuzzel river waybar tmux wlr-randr
 
 brightnessctl
 # Make sure you're in the video group:
