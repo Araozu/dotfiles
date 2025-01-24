@@ -82,7 +82,7 @@
                           :acide/trazo-frontend :onelight
                           :csharp :caret
                           :zig :ayu-dark}]
-    (var theme :randomhue)
+    (var theme "vim")
     (each [dir dir-theme (pairs directory-themes)]
       (when (string.find cwd dir 1 true) (set theme dir-theme) (lua :break)))
     (vim.cmd (.. "colorscheme " theme))))
