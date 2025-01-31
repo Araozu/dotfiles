@@ -9,5 +9,6 @@
 	"scottmckendry/cyberdream.nvim"
 	"Shatur/neovim-ayu"
 	"projekt0n/caret.nvim"
+	"maxmx03/solarized.nvim"
  ]
 
