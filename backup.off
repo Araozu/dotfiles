@@ -1,0 +1,3 @@
+:Fnl (set vim.o.backup false)
+:Fnl (set vim.o.writebackup false)
+:Fnl (set vim.o.swapfile false)
