@@ -16,7 +16,7 @@ riverctl map normal Super Return spawn ghostty
 riverctl map normal Super Space spawn fuzzel
 
 # Set keyboard layout
-riverctl keyboard-layout es
+riverctl keyboard-layout latam
 # riverctl keyboard-layout es
 
 # Super+W to close the focused view

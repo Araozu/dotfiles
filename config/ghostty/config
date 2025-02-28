@@ -1,4 +1,6 @@
-font-family = "ComicCodeLigatures Nerd Font"
+# font-family = "GeistMono Nerd Font"
+font-family = "IosevkaTermSlab Nerd Font"
+# font-family = "ComicCodeLigatures Nerd Font"
 font-size = 10
 
 # theme = Adwaita Dark

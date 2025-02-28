@@ -123,6 +123,7 @@
                                    {:astro {}
                                     :clojure_lsp {}
                                     :gopls {}
+                                    :emmet_language_server {}
                                     :lua_ls {:settings {:Lua {:completion {:callSnippet :Replace}}}}
                                     :tailwindcss {}
                                     :ts_ls {}

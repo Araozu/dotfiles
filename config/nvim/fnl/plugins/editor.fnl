@@ -111,4 +111,5 @@
  mini
  "tpope/vim-sleuth" ; Detect tabstop and shiftwidth automatically
  autopairs
+ "windwp/nvim-ts-autotag"
  ]
