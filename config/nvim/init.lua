@@ -52,3 +52,4 @@ require("lazy").setup({
 
 -- set color theme depending on the current folder
 require("autocolors")
+require("copilot-config")

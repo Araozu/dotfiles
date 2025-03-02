@@ -36,8 +36,7 @@
                             (vim.keymap.set :n :<leader>sc
                                             (fn []
                                               (builtin.colorscheme ((. (require :telescope.themes)
-                                                                       :get_dropdown) {:previewer false
-                                                                                                                                                                                          :winblend 20})))
+                                                                       :get_dropdown) {:previewer false :winblend 20})))
                                             {:desc "[S]earch [C]olorschemes"})
                             (vim.keymap.set :n :<leader><leader>
                                             builtin.current_buffer_fuzzy_find

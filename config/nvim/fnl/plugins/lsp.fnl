@@ -155,10 +155,9 @@
                                  :williamboman/mason-lspconfig.nvim
                                  :WhoIsSethDaniel/mason-tool-installer.nvim
                                  {1 :j-hui/fidget.nvim :opts {}}
-                                 :hrsh7th/cmp-nvim-lsp]})	
+                                 :hrsh7th/cmp-nvim-lsp]})
 
 [
  lazydev
  luvit-meta
- lspconfig
- ]
+ lspconfig]

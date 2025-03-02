@@ -100,7 +100,7 @@
                             (cmp.event:on :confirm_done
                                           (cmp-autopairs.on_confirm_done)))
                   :dependencies [:hrsh7th/nvim-cmp]
-                  :event :InsertEnter})	
+                  :event :InsertEnter})
 
 [
  blankline
@@ -111,5 +111,5 @@
  mini
  "tpope/vim-sleuth" ; Detect tabstop and shiftwidth automatically
  autopairs
- "windwp/nvim-ts-autotag"
- ]
+ "windwp/nvim-ts-autotag"]
+ 
