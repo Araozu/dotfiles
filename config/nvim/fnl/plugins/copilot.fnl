@@ -1,6 +1,7 @@
-(local copilot
-       {1 "CopilotC-Nvim/CopilotChat.nvim"
-        :dependencies {1 "github/copilot.vim"
-                       2 "nvim-lua/plenary.nvim"}})
+(local chat {1 :CopilotC-Nvim/CopilotChat.nvim
+             :build "make tiktoken"
+             :dependencies [[:github/copilot.vim]
+                            {1 :nvim-lua/plenary.nvim :branch :master}]
+             :opts {}})
 
-[copilot]
+[chat]
