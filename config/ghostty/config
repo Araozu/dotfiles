@@ -1,7 +1,7 @@
 font-family = "ComicCodeLigatures Nerd Font"
 font-size = 10
 
-# theme = Adwaita Dark
-theme = light:Adwaita,dark:Adwaita Dark
+theme = Adwaita Dark
+# theme = light:Adwaita,dark:Adwaita Dark
 fullscreen = true
 window-decoration = false

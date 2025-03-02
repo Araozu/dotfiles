@@ -33,7 +33,7 @@ set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
 # add node to env, installed by nvm fish
-fish_add_path ~/.local/share/nvm/v22.13.0/bin/
+fish_add_path ~/.local/share/nvm/v22.13.1/bin/
 
 # common alias
 alias l='eza --long --header --icons --group-directories-first'

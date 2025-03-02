@@ -16,8 +16,8 @@ riverctl map normal Super Return spawn ghostty
 riverctl map normal Super Space spawn fuzzel
 
 # Set keyboard layout
-riverctl keyboard-layout es
 # riverctl keyboard-layout es
+riverctl keyboard-layout latam
 
 # Super+W to close the focused view
 riverctl map normal Super W close
@@ -37,8 +37,8 @@ riverctl map normal Super L focus-view right
 #
 
 # use wlr-randr
-# wlr-randr --output DP-1 --pos 0,0 --output HDMI-A-2 --pos 1920,0
-wlr-randr --output HDMI-A-2 --mode 1920x1080@100Hz --pos 0,0 --output DP-1 --pos 1920,0
+wlr-randr --output DP-1 --pos 0,0 --output HDMI-A-1 --pos 1920,0
+# wlr-randr --output HDMI-A-2 --mode 1920x1080@100Hz --pos 0,0 --output DP-1 --pos 1920,0
 
 # follow focus of the mouse
 riverctl focus-follows-cursor normal

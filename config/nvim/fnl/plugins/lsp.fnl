@@ -13,15 +13,19 @@
 
 (local lspconfig {1 :neovim/nvim-lspconfig
                   :config (fn []
+                            ; Configure Gleam lang
                             ((. (require :lspconfig) :gleam :setup) {})
+                            ; Configure Typescript: disable auto format
                             ((. (require :lspconfig) :ts_ls :setup) {:on_attach (fn [client
                                                                                      bufnr]
                                                                                   (disable-formatting client))})
+                            ; Configure eslint for use instead of ts-ls
                             ((. (require :lspconfig) :eslint :setup) {:on_attach (fn [client
                                                                                       bufnr]
                                                                                    (vim.api.nvim_create_autocmd :BufWritePre
                                                                                                                 {:buffer bufnr
                                                                                                                  :command :EslintFixAll}))})
+
                             (vim.api.nvim_create_autocmd :LspAttach
                                                          {:callback (fn [event]
                                                                       (fn map [keys
