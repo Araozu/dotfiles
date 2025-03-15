@@ -9,11 +9,22 @@ window#waybar {
     color: white;
 }
 
+#tags {
+    border: 0;
+}
+
 #tags button {
     padding: 0 5px;
     color: rgba(255, 255, 255, 0.95);
     border-radius: 0;
+    border: 0;
+    transition: color 0.2s, background 0.2s;
     /*background: rgba(100, 100, 100, 0.25);*/
+}
+
+#tags button:hover {
+    background: #284777;
+    color: #d6e3ff;
 }
 
 #tags button:first-child {
@@ -29,6 +40,20 @@ window#waybar {
     color: #d6e3ff;
 }
 
+#custom-screenshot {
+    padding: 0 10px;
+    margin: 2px 5px;
+    border-radius: 5px;
+    background: #aac7ff;
+    color: #0a305f;
+    transition: color 0.2s, background 0.2s;
+}
+
+#custom-screenshot:hover {
+    background: #284777;
+    color: #d6e3ff;
+}
+
 #clock,
 #cpu,
 #memory,
@@ -39,5 +64,6 @@ window#waybar {
 
 #window {
     padding-left: 12px;
+    padding-right: 12px;
 }
 
