@@ -4,8 +4,13 @@
     "height": 26,
     "modules-left": ["river/window"],
     "modules-center": ["river/tags"],
-    "modules-right": ["custom/brightness", "cpu", "memory", "network", "pulseaudio", "clock"],
+    "modules-right": ["custom/screenshot", "custom/brightness", "cpu", "memory", "network", "pulseaudio", "clock"],
 
+    "custom/screenshot": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "grim -g \"$(slurp)\""
+    },
     "custom/brightness": {
         "format": "BRI {}%",
         "exec": "ddcutil getvcp 10 | grep -o '[0-9]\\+$'",
