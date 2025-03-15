@@ -1,22 +1,32 @@
 /* ~/.config/waybar/style.css */
 * {
-    font-family: monospace;
+    font-family: "Iosevka Aile", "IosevkaTermSlab Nerd Font", monospace;
     font-size: 12px;
 }
 
 window#waybar {
-    background: #282828;
-    color: #ebdbb2;
+    background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+    color: white;
 }
 
 #tags button {
     padding: 0 5px;
-    color: #928374;
+    color: rgba(255, 255, 255, 0.95);
+    border-radius: 0;
+    /*background: rgba(100, 100, 100, 0.25);*/
+}
+
+#tags button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+#tags button:last-child {
+    border-radius: 0 5px 5px 0;
 }
 
 #tags button.focused {
-    color: #ebdbb2;
-    background: #3c3836;
+    background: #284777;
+    color: #d6e3ff;
 }
 
 #clock,
@@ -26,3 +36,8 @@ window#waybar {
 #pulseaudio {
     padding: 0 10px;
 }
+
+#window {
+    padding-left: 12px;
+}
+

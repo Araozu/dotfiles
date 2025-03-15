@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 26,
-    "modules-left": ["river/tags", "river/window"],
-    "modules-center": [],
+    "modules-left": ["river/window"],
+    "modules-center": ["river/tags"],
     "modules-right": ["custom/brightness", "cpu", "memory", "network", "pulseaudio", "clock"],
 
     "custom/brightness": {
@@ -18,23 +18,35 @@
         "tooltip": false
     },
     "cpu": {
-        "format": "CPU {usage}%",
+        "format": "CPU {usage}% ",
         "interval": 1
     },
     "memory": {
-        "format": "MEM {}%",
+        "format": "MEM {}% ",
         "interval": 1
     },
     "network": {
-        "format-wifi": "WiFi ({signalStrength}%)",
-        "format-ethernet": "ETH",
+        "format-wifi": "WiFi ({signalStrength}%) ",
+        "format-ethernet": "ETH ",
         "format-disconnected": "NET ✕"
     },
     "pulseaudio": {
-        "format": "VOL {volume}%",
-        "format-muted": "MUTED"
+        "scroll-step": 5, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
     },
     "river/tags": {
-        "num-tags": 9
+        "num-tags": 5
     }
 }
