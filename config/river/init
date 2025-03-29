@@ -37,8 +37,8 @@ riverctl map normal Super L focus-view right
 #
 
 # use wlr-randr
-wlr-randr --output DP-1 --pos 0,0 --output HDMI-A-1 --pos 1920,0
-# wlr-randr --output HDMI-A-2 --mode 1920x1080@100Hz --pos 0,0 --output DP-1 --pos 1920,0
+# wlr-randr --output DP-1 --pos 0,0 --output HDMI-A-1 --pos 1920,0
+wlr-randr --output HDMI-A-2 --mode 1920x1080@100Hz --pos 0,0
 
 # follow focus of the mouse
 riverctl focus-follows-cursor normal
@@ -178,7 +178,7 @@ done
 riverctl background-color 0x002b36
 
 # Set keyboard repeat rate
-riverctl set-repeat 50 300
+riverctl set-repeat 100 300
 
 # Make all views with an app-id that starts with "float" and title "foo" start floating.
 riverctl rule-add -app-id 'float*' -title 'foo' float
