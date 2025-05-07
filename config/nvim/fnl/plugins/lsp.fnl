@@ -2,6 +2,13 @@
   (set client.server_capabilities.documentFormattingProvider false)
   (set client.server_capabilities.documentRangeFormattingProvider false))
 
+(fn disable-other-formatters [bufnr eslint-client-id]
+  (let [clients (vim.lsp.get_active_clients {:bufnr bufnr})]
+    (each [_ client (ipairs clients)]
+      (when (and
+              (not= client.id eslint-client-id)
+              (and client.server_capabilities client.server_capabilities.documentFormattingProvider))
+        (set client.server_capabilities.documentFormattingProvider false)))))
 
 (local lazydev
        {1 :folke/lazydev.nvim
@@ -16,15 +23,18 @@
                             ; Configure Gleam lang
                             ((. (require :lspconfig) :gleam :setup) {})
                             ; Configure Typescript: disable auto format
-                            ((. (require :lspconfig) :ts_ls :setup) {:on_attach (fn [client
-                                                                                     bufnr]
-                                                                                  (disable-formatting client))})
+                            ((. (require :lspconfig) :ts_ls :setup) 
+                             {:on_attach (fn [client
+                                              bufnr]
+                                           (disable-formatting client))})
                             ; Configure eslint for use instead of ts-ls
-                            ((. (require :lspconfig) :eslint :setup) {:on_attach (fn [client
-                                                                                      bufnr]
-                                                                                   (vim.api.nvim_create_autocmd :BufWritePre
-                                                                                                                {:buffer bufnr
-                                                                                                                 :command :EslintFixAll}))})
+                            ((. (require :lspconfig) :eslint :setup) 
+                             {:on_attach (fn [client bufnr]
+                                           ; Disable other formattes
+                                          (disable-other-formatters bufnr client.id)
+                                          (vim.api.nvim_create_autocmd 
+                                            :BufWritePre 
+                                            {:buffer bufnr :command :EslintFixAll}))})
 
                             (vim.api.nvim_create_autocmd :LspAttach
                                                          {:callback (fn [event]
@@ -126,11 +136,13 @@
                             (local servers
                                    {:astro {}
                                     :clojure_lsp {}
+                                    :eslint {}
                                     :gopls {}
                                     :emmet_language_server {}
                                     :lua_ls {:settings {:Lua {:completion {:callSnippet :Replace}}}}
                                     :tailwindcss {}
                                     :ts_ls {}
+                                    :omnisharp {}
                                     :zls {}})
                             ((. (require :mason) :setup))
                             (local ensure-installed
