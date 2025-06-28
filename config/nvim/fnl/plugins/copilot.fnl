@@ -9,4 +9,4 @@
                  :chat_autocomplete false
                  :sticky [""]}})
 
-[chat]
+[]

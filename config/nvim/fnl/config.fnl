@@ -27,6 +27,13 @@
 (set vim.opt.scrolloff 4)
 
 ;
+; Disable backup behaviour
+;
+(set vim.opt.backup false)
+(set vim.opt.writebackup false)
+; (set vim.opt.swapfile false)
+
+;
 ; Setup carry over
 ;
 

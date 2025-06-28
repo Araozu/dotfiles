@@ -2,16 +2,18 @@
 # font-family = "SpaceMono Nerd Font"
 # font-family = "ShureTechMono Nerd Font"
 # font-family = "M+ Nerd Font"
-font-family = "CaskaydiaCove Nerd Font"
+# font-family = "CaskaydiaCove Nerd Font"
 # font-family = "IosevkaTermSlab Nerd Font"
 # font-family = "Iosevka Nerd Font"
 # font-family = "ComicCodeLigatures Nerd Font"
-# font-family = "JetBrainsMono Nerd Font"
+font-family = "JetBrainsMono Nerd Font"
 # font-family = "FiraCode Nerd Font"
 font-size = 10
 
-# theme = Adwaita Dark
+# theme = Github
+# theme = GitHub Dark
 # theme = Builtin Solarized Light
-theme = light:Adwaita,dark:Adwaita Dark
+theme = Adwaita Dark
+# theme = light:Adwaita,dark:Adwaita Dark
 fullscreen = true
 window-decoration = false

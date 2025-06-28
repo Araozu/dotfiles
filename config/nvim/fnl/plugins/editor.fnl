@@ -33,6 +33,8 @@
                           :formatters_by_ft {:lua [:stylua]}
                           :notify_on_error false}})
 
+(local mustache {1 :mustache/vim-mustache-handlebars})
+
 (local autocomplete {1 :hrsh7th/nvim-cmp
                      :config (fn []
                                (local cmp (require :cmp))
@@ -105,6 +107,7 @@
 [
  blankline
  emmet
+ mustache
  autoformat
  autocomplete
  comments
