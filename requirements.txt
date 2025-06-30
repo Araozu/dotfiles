@@ -7,7 +7,7 @@ docker docker-compose
 # neovim config
 # https://github.com/Araozu/neovim-setup.git
 
-ghostty fuzzel river waybar tmux wlr-randr
+ghostty fuzzel river waybar tmux wlr-randr river-bsp-layout
 
 # notifications
 # https://wiki.archlinux.org/title/Desktop_notifications

@@ -191,7 +191,7 @@ riverctl rule-add -app-id "bar" csd
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout bsp-layout
-river-bsp-layout --inner-gap 5 --outer-gap 10 --split-perc 0.5 &
+river-bsp-layout --inner-gap 2 --outer-gap 4 --split-perc 0.5 &
 
 #
 # BAR
@@ -206,7 +206,7 @@ waybar &
 dunst &
 
 # polkit
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/polkit-kde-authentication-agent-1 &
 
 # Screensharing
