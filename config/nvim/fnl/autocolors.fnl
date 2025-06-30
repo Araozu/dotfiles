@@ -7,6 +7,8 @@
                           :acide/trazo-frontend :onelight
                           :acide/perucontrol/backend :caret
                           :acide/perucontrol/frontend "rose-pine-moon"
+                          :acide/teaminnovation/backend :cyberdream
+                          :acide/teaminnovation/frontend :vscode
                           :csharp :caret
                           :zig :ayu-dark}]
     (var theme "randomhue")

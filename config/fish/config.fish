@@ -5,7 +5,7 @@ end
 # Sane defaults
 set -gx EDITOR vi
 set -gx VISUAL vi
-set -gx TERM foot
+set -gx TERM xterm-256color
 
 function git-push
     git push github (git rev-parse --abbrev-ref HEAD)
@@ -40,6 +40,7 @@ alias l='eza --long --header --icons --group-directories-first'
 alias ll='eza --all --long --header --icons --group-directories-first'
 alias lt='eza --ignore-glob="node_modules" --tree --level=2 --header --icons --group-directories-first'
 alias ltt='eza --ignore-glob="node_modules" --tree --header --icons --group-directories-first'
+alias llt='eza --ignore-glob="node_modules" --all --tree --level=2 --header --icons --group-directories-first'
 
 # pnpm
 set -gx PNPM_HOME "/home/fernando/.local/share/pnpm"
@@ -53,3 +54,7 @@ starship init fish | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# go binaries
+fish_add_path ~/go/bin/
+

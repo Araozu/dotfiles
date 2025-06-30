@@ -27,6 +27,9 @@
                              {:on_attach (fn [client
                                               bufnr]
                                            (disable-formatting client))})
+                            ; Configure biome
+                            (vim.lsp.enable "biome")
+
                             ; Configure eslint for use instead of ts-ls
                             ((. (require :lspconfig) :eslint :setup) 
                              {:on_attach (fn [client bufnr]
