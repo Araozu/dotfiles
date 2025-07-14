@@ -5,11 +5,17 @@
 # font-family = "CaskaydiaCove Nerd Font"
 # font-family = "IosevkaTermSlab Nerd Font"
 # font-family = "Iosevka Nerd Font"
-# font-family = "ComicCodeLigatures Nerd Font"
+font-family = "ComicCodeLigatures Nerd Font"
 font-family = "JetBrainsMono Nerd Font"
 # font-family = "FiraCode Nerd Font"
+# font-family = "BlexMono Nerd Font"
+# font-family = "EnvyCodeR Nerd Font"
+# font-family = "Monofur Nerd Font"
+# font-family = "GoMono Nerd Font"
+# font-family = "Tinos Nerd Font"
 font-size = 10
 
+# theme = ChallengerDeep
 # theme = Github
 # theme = GitHub Dark
 # theme = Builtin Solarized Light
