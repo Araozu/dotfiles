@@ -5,3 +5,7 @@ config/fish/completions
 config/fish/conf.d
 config/fish/functions
 
+# neovim lazy lock
+# Different install may have different mason plugins
+config/nvim/lazy-lock.json
+
