@@ -34,6 +34,7 @@ vim.opt.scrolloff = 4
 -- Disasble backup write, due to conflicts with some hot reload tools (dotnet watch)
 vim.opt.backup = false
 vim.opt.writebackup = false
+vim.opt.swapfile = false
 
 --
 -- Some keymaps
