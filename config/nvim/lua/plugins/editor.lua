@@ -1,4 +1,5 @@
 return {
+	"NMAC427/guess-indent.nvim",
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -58,5 +59,24 @@ return {
 			-- ... and there is more!
 			--  Check out: https://github.com/echasnovski/mini.nvim
 		end,
+	},
+
+	{ -- Adds git related signs to the gutter, as well as utilities for managing changes
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			signs = {
+				add = { text = "+" },
+				change = { text = "~" },
+				delete = { text = "_" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
+			},
+		},
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		dependencies = { "hrsh7th/nvim-cmp" },
+		opts = {},
 	},
 }
