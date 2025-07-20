@@ -79,4 +79,7 @@ return {
 		dependencies = { "hrsh7th/nvim-cmp" },
 		opts = {},
 	},
+
+	-- Tabs isolation
+	{ "tiagovla/scope.nvim", config = true },
 }
